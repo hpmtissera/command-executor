@@ -9,6 +9,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/execute"}, loadOnStartup = 1)
 public class CommandExecutorServlet extends HttpServlet {
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
@@ -22,4 +23,5 @@ public class CommandExecutorServlet extends HttpServlet {
         request.setAttribute("result", result);
         request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
+
 }
